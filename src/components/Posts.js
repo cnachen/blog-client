@@ -97,7 +97,7 @@ export default function Posts({ pageId }) {
                 className="markdown-body"
                 remarkPlugins={[remarkGfm]}
               >
-                {item.content?.slice(0, 100)}
+                {item.content?.split(/\r?\n/)?.slice(0, 3)?.join("\n")}
               </ReactMarkdown>
               <h5>{item.date}</h5>
             </Card>

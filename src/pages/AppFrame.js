@@ -4,6 +4,8 @@ import Hitokoto from "../components/Hitokoto";
 import AboutMe from "../components/AboutMe";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import Tags from "../components/Tags";
+import Categories from "../components/Categories";
 
 export default function AppFrame(props) {
   const { Content } = Layout;
@@ -39,6 +41,15 @@ export default function AppFrame(props) {
                 <Card type="inner" hoverable title="About me" style={cardStyle}>
                   <AboutMe></AboutMe>
                 </Card>
+                <Card
+                  type="inner"
+                  hoverable
+                  title="Categories"
+                  style={cardStyle}
+                >
+                  <Categories></Categories>
+                </Card>
+
                 <Card type="inner" hoverable title="Counter" style={cardStyle}>
                   <Counter></Counter>
                 </Card>
@@ -63,6 +74,9 @@ export default function AppFrame(props) {
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <Card type="inner" hoverable title="Hitokoto" style={cardStyle}>
                   <Hitokoto></Hitokoto>
+                </Card>
+                <Card type="inner" hoverable title="Tags" style={cardStyle}>
+                  <Tags></Tags>
                 </Card>
               </div>
             </Col>

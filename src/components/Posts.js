@@ -24,7 +24,7 @@ export default function Posts({ pageId }) {
 
   useEffect(() => {
     fetchPosts(5, (page - 1) * 5);
-  }, []);
+  });
 
   const onPageChanged = (page) => {
     setPage(page);

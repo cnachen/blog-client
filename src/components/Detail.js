@@ -15,7 +15,7 @@ export default function Detail({ postId }) {
 
   useEffect(() => {
     fetchPost();
-  }, []);
+  });
 
   const fetchPost = () => {
     fetch("/api/posts/get", {
